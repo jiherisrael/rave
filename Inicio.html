@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <style>
+        body {
+            background-color: black;   
+        }
+
+        p,span,h4,h3,h2,h1{
+            color: white;
+        }
+
+        header{
+            background: linear-gradient(to bottom, black 90%, #FFD700);
+            width: 100%;
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 200px; 
+        }
+
+        header img {
+            width: 150px; 
+            height: auto;
+        }
+
+        footer{
+            background: linear-gradient(to top, black 90%, #FFD700);
+            width: 100%;
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100px; 
+        }
+
+        main {
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            flex-direction: row; /* Alineación horizontal predeterminada */
+            flex-wrap: wrap; /* Permitir que los elementos se envuelvan si es necesario */
+            gap: 20px; /* Espacio entre secciones */
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            display: flex; 
+            justify-content: center; /* Centrar en el eje principal (vertical porque es columna) */
+            align-items: center; /* Centrar en el eje cruzado (horizontal) */
+            flex-direction: column; /* Cambiar a disposición vertical */
+            flex-wrap: wrap; /* Permitir que los elementos se envuelvan si es necesario */
+            gap: 20px; /* Espacio entre elementos */
+            padding: 30px; /* Espaciado interno */
+            margin: 30px;
+            border: 7px solid #FFD700;
+            border-radius: 30px;
+            width: 400px; /* Anchura fija */
+        }
+
+
+        button{
+            background-color: #FFD700;
+            color: black;
+            height: 50px;
+            width: 200px;
+            border: 5px solid #FFD700;
+            border-radius: 40px;
+            font-weight: bolder;
+            font-size: large;
+            transition: background-color 0.8s ease, color 0.8s ease;
+        }
+
+        button:hover{
+            background-color: black;
+            color: white;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="img/logo.jpeg" alt="Logo">
+    </header>
+
+    <main>
+
+        <h1>¡Bienvenidos a los eventos más espectaculares del mundo!</h1>
+        <h2>Vive las mejores fiestas, experiencias únicas y sorpresas increíbles. Descubre regalos exclusivos y recompensas que te encantarán.</h2>
+
+
+        <section>
+            <h3> Aquí se pondran los eventos mas básicos</h3>
+            <button> COMPRAR ENTRADAS</button>
+        </section>
+
+        <section>
+            <h3> Aquí se pondrán los mas exclusivos</h3>
+            <button> COMPRAR ENTRADAS</button>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p> © 2024 Izar Rodríguez Inc. Todos los Derechos Reservados </p>
+    </footer>
+</body>
+</html>
