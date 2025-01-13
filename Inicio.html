@@ -6,15 +6,15 @@
     <title>Inicio</title>
     <style>
         body {
-            background-color: black;   
+            background-color: #0F0404;   
         }
 
         p,span,h4,h3,h2,h1{
-            color: white;
+            color: #FFFFF0;
         }
 
         header{
-            background: linear-gradient(to bottom, black 90%, #FFD700);
+            background: linear-gradient(to bottom, #0F0404 90%, #FFE10B);
             width: 100%;
             display: flex; 
             justify-content: center; 
@@ -28,7 +28,7 @@
         }
 
         footer{
-            background: linear-gradient(to top, black 90%, #FFD700);
+            background: linear-gradient(to top, #0F0404 90%, #FFE10B);
             width: 100%;
             display: flex; 
             justify-content: center; 
@@ -41,42 +41,53 @@
             justify-content: center; 
             align-items: center; 
             flex-direction: row; /* Alineación horizontal predeterminada */
-            flex-wrap: wrap; /* Permitir que los elementos se envuelvan si es necesario */
-            gap: 20px; /* Espacio entre secciones */
+            flex-wrap: wrap; 
+            gap: 20px; 
             padding: 20px;
             text-align: center;
         }
 
         section {
             display: flex; 
-            justify-content: center; /* Centrar en el eje principal (vertical porque es columna) */
-            align-items: center; /* Centrar en el eje cruzado (horizontal) */
-            flex-direction: column; /* Cambiar a disposición vertical */
-            flex-wrap: wrap; /* Permitir que los elementos se envuelvan si es necesario */
-            gap: 20px; /* Espacio entre elementos */
-            padding: 30px; /* Espaciado interno */
+            justify-content: center; 
+            align-items: center; 
+            flex-direction: column; 
+            flex-wrap: wrap; 
+            gap: 20px; 
+            padding: 30px; 
             margin: 30px;
-            border: 7px solid #FFD700;
+            border: 7px solid #FFE10B;
             border-radius: 30px;
-            width: 400px; /* Anchura fija */
+            width: 400px; 
         }
 
 
         button{
-            background-color: #FFD700;
-            color: black;
+            background-color: #FFE10B;
+            color: #0F0404;
             height: 50px;
             width: 200px;
-            border: 5px solid #FFD700;
+            border: 5px solid #c0a301;
             border-radius: 40px;
             font-weight: bolder;
             font-size: large;
-            transition: background-color 0.8s ease, color 0.8s ease;
+            cursor: pointer;
         }
 
         button:hover{
-            background-color: black;
-            color: white;
+            background-color: #8a7502;
+            transition: background-color 0.4s ease, color 0.4s ease;
+        }
+
+        button:active{
+            background-color: #0F0404;
+            color: #FFFFF0;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        h1 {
+            margin-bottom: 20px; 
+            border-bottom: 2px solid #FFE10B; 
         }
 
 
@@ -84,7 +95,7 @@
 </head>
 <body>
     <header>
-        <img src="img/logo.jpeg" alt="Logo">
+        <a href="Inicio.html"><img src="img/logo.jpeg" alt="Logo"></a>
     </header>
 
     <main>
@@ -95,19 +106,19 @@
 
         <section>
             <h3> Aquí se pondran los eventos mas básicos</h3>
-            <button> COMPRAR ENTRADAS</button>
+            <a href="EntradasBaratas.html"><button type="button"> Visitar </button></a>
         </section>
 
         <section>
             <h3> Aquí se pondrán los mas exclusivos</h3>
-            <button> COMPRAR ENTRADAS</button>
+            <button type="button"> Visitar </button>
         </section>
 
 
     </main>
 
     <footer>
-        <p> © 2024 Izar Rodríguez Inc. Todos los Derechos Reservados </p>
+        <p> © 2025 Rave On Inc. Todos los Derechos Reservados </p>
     </footer>
 </body>
 </html>

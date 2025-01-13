@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entradas Baratas</title>
+    <style> 
+    
+    body {
+        background-color: #0F0404;   
+    }
+
+    p,span,h4,h3,h2,h1,li{
+        color: #FFFFF0;
+    }
+
+    header{
+        background: linear-gradient(to bottom, #0F0404 90%, #FFE10B);
+        width: 100%;
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        height: 200px; 
+    }
+
+    header img {
+        width: 150px; 
+        height: auto;
+    }
+
+    footer{
+        background: linear-gradient(to top, #0F0404 90%, #FFE10B);
+        width: 100%;
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        height: 100px; 
+    }
+
+        main {
+            display: flex;
+            flex-direction: column; /* Asegura disposición vertical */
+            justify-content: flex-start; /* Ajusta alineación al inicio */
+            align-items: center; /* Centra los elementos horizontalmente */
+            gap: 20px; /* Espaciado consistente entre elementos */
+            padding: 20px;
+            text-align: center;
+    }
+
+    section {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    padding: 30px; 
+    margin: 30px;
+    border: 7px solid #FFE10B;
+    border-radius: 30px;
+    width: 400px;  /* Mantener el ancho fijo */
+    min-width: 400px;  /* Asegura que el ancho mínimo del section no se reduzca */
+    flex-basis: 400px;  /* Fija el tamaño base del section */
+}
+
+
+        button{
+            background-color: #FFE10B;
+            color: #0F0404;
+            height: 50px;
+            width: 200px;
+            border: 5px solid #c0a301;
+            border-radius: 40px;
+            font-weight: bolder;
+            font-size: large;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: #8a7502;
+            transition: background-color 0.4s ease, color 0.4s ease;
+        }
+
+        button:active{
+            background-color: #0F0404;
+            color: #FFFFF0;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        h1 {
+    margin-bottom: 20px; /* Espacio después del h1 */
+    border-bottom: 2px solid #FFE10B; /* Definir el borde con el estilo 'solid' */
+}
+
+
+        h2,ul {
+            text-align: left; /* Alinea el texto a la izquierda */
+            align-self: flex-start; /* En un contenedor flex, alinea solo este elemento al inicio */
+            margin: 0; /* Ajusta márgenes si es necesario */
+        }
+
+        h2{
+            margin-top: 40px;
+        }
+
+        ul{
+            font-size: large;
+        }
+
+        @media (max-width: 500px) {
+            
+            ul {
+                display: inline-block; /* Hace que el ul respete el centrado */
+                text-align: left; /* Opcional: Alinea el contenido del ul a la izquierda */
+                margin: 20px auto; /* Centra el ul horizontalmente */
+                padding: 0; /* Ajusta el espacio interno */
+            }
+            
+        }
+
+        @media (max-width: 500px) {
+            h2{
+                text-align: center;
+                align-items: center;
+            }
+        }
+
+        .contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; /* Alineación horizontal predeterminada */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan si el espacio es limitado */
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+    /* Puedes agregar otras reglas de media queries para adaptar el tamaño según sea necesario */
+    @media (max-width: 900px) {
+        section {
+            width: 300px; /* Ajusta el ancho para pantallas pequeñas */
+            min-width: 300px; /* Se asegura de que el ancho mínimo sea 100% en pantallas pequeñas */
+        }
+    }
+
+    section p {
+        font-size: large;
+    }
+
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="Inicio.html"><img src="img/logo.jpeg" alt="Logo"></a>
+    </header>
+
+    <main>
+
+       <h1>Entradas baratas</h1>
+       <h2>En este tipo de entradas, tendrás estos beneficios: </h2>
+
+       <ul>
+
+        <li>Entrada al evento </li>
+        <li>Gratis dos consumiciones</li>
+        <li>Regalos exclusivos</li>
+
+       </ul>
+
+       <h3>Después de comprar la entrada, se le enviará un pdf al correo electronico.
+        Al llegar al festival, deberá escanear el codigo QR que aparece en el pdf
+       </h3>
+       
+
+       <div class="contenedor">
+
+       <section id="firstRelease">
+        <h3> 1st release</h3>
+        <p> 22 de Marzo 2025 </p>
+        <p>21:00 - 03:30</p>
+        <a href="#"><button type="button"> COMPRAR ENTRADAS </button></a>
+        <p id="contador1"> </p>
+      </section>
+
+        <section id="secondRelease">
+            <h3> 2nd release</h3>
+            <p> 22 de Marzo 2025 </p>
+            <p>21:00 - 03:30</p>
+            <a href="#"><button type="button"> COMPRAR ENTRADAS </button></a>
+        </section>
+
+        <section id="thirdRelease">
+            <h3> 3th release</h3>
+            <p> 22 de Marzo 2025 </p>
+            <p>21:00 - 03:30</p>
+            <a href="#"><button type="button"> COMPRAR ENTRADAS </button></a>
+        </section>
+
+    </div>
+
+    </main>
+
+    <footer>
+        <p> © 2025 Rave On Inc. Todos los Derechos Reservados </p>
+    </footer>
+
+    <script>
+        const deadline = new Date("2025-03-22T23:59:59").getTime(); // Fecha límite
+
+       
+        const countdown = setInterval(() => {
+            const now = new Date().getTime(); 
+            const timeLeft = deadline - now; // Diferencia en milisegundos
+
+            if (timeLeft >= 0) {
+                
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                // Mostrar el contador
+                document.getElementById("contador1").innerHTML = 
+                    `La venta de entradas de este release expira en: ${days} días, ${hours} horas, ${minutes} minutos, ${seconds} segundos`;
+            } else {
+                // Cuando el tiempo se acabe
+                clearInterval(countdown);
+                document.getElementById("contador1").classList.add("expired");
+                document.getElementById("contador1").innerHTML = "¡La venta de entradas ha terminado!";
+            }
+        }, 1000);
+
+
+    </script>
+    
+</body>
+</html>
