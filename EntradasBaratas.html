@@ -107,23 +107,7 @@
             font-size: large;
         }
 
-        @media (max-width: 500px) {
-            
-            ul {
-                display: inline-block; /* Hace que el ul respete el centrado */
-                text-align: left; /* Opcional: Alinea el contenido del ul a la izquierda */
-                margin: 20px auto; /* Centra el ul horizontalmente */
-                padding: 0; /* Ajusta el espacio interno */
-            }
-            
-        }
-
-        @media (max-width: 500px) {
-            h2{
-                text-align: center;
-                align-items: center;
-            }
-        }
+        
 
         .contenedor {
     display: flex;
@@ -136,17 +120,36 @@
     text-align: center;
 }
 
-    /* Puedes agregar otras reglas de media queries para adaptar el tamaño según sea necesario */
+    
     @media (max-width: 900px) {
         section {
-            width: 300px; /* Ajusta el ancho para pantallas pequeñas */
-            min-width: 300px; /* Se asegura de que el ancho mínimo sea 100% en pantallas pequeñas */
+            width: 300px; 
+            min-width: 300px; 
         }
     }
 
     section p {
         font-size: large;
     }
+
+    a{
+        color: #FFE10B;
+    }
+
+    #info{
+        margin-top: 60px;
+    }
+
+    section p[id] {
+        background-color: rgb(2, 30, 56);
+        padding: 10px;
+        border-radius: 40px;
+    }
+
+    #secondRelease, #thirdRelease {
+    display: none ;
+}
+
 
 
 
@@ -160,7 +163,7 @@
 
     <main>
 
-       <h1>Entradas baratas</h1>
+       <h1>Pack solo</h1>
        <h2>En este tipo de entradas, tendrás estos beneficios: </h2>
 
        <ul>
@@ -171,10 +174,24 @@
 
        </ul>
 
-       <h3>Después de comprar la entrada, se le enviará un pdf al correo electronico.
-        Al llegar al festival, deberá escanear el codigo QR que aparece en el pdf
-       </h3>
        
+
+
+       <h2>Información del evento: </h2>
+
+       <ul>
+
+        <li>Nombre del recinto: <a href="https://www.dogyard.no/"> Dogyard </a></li>  
+        <li>Dirección: <a href="https://g.co/kgs/EvnRccj">Økernveien 145, 0580 Oslo</a></li>    
+        <li>Capacidad: 800 Personas</li>
+
+       </ul>
+
+
+       
+       <h3 id="info">A cada asistente, al mostrar su entrada el día del evento, se le dará una pulsera de
+        festival (con cierre de seguridad) con un chip inteligente
+       </h3>
 
        <div class="contenedor">
 
@@ -182,7 +199,7 @@
         <h3> 1st release</h3>
         <p> 22 de Marzo 2025 </p>
         <p>21:00 - 03:30</p>
-        <a href="#"><button type="button"> COMPRAR ENTRADAS </button></a>
+        <a href="#"><button type="button"> COMPRAR  </button></a>
         <p id="contador1"> </p>
       </section>
 
@@ -190,14 +207,14 @@
             <h3> 2nd release</h3>
             <p> 22 de Marzo 2025 </p>
             <p>21:00 - 03:30</p>
-            <a href="#"><button type="button"> COMPRAR ENTRADAS </button></a>
+            <a href=""><button type="button"> COMPRAR  </button></a>
         </section>
 
         <section id="thirdRelease">
             <h3> 3th release</h3>
             <p> 22 de Marzo 2025 </p>
             <p>21:00 - 03:30</p>
-            <a href="#"><button type="button"> COMPRAR ENTRADAS </button></a>
+            <a href=""><button type="button"> COMPRAR  </button></a>
         </section>
 
     </div>
