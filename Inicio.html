@@ -22,7 +22,7 @@
             height: 200px; 
         }
 
-        header img {
+         img {
             width: 150px; 
             height: auto;
         }
@@ -86,8 +86,7 @@
         }
 
         h1 {
-            margin-bottom: 20px; 
-            border-bottom: 2px solid #FFE10B; 
+            margin-bottom: 20px;  
         }
 
         .precio{
@@ -100,18 +99,50 @@
 
         }
 
+        article h2 {
+    display: inline-block; /* Hace que el ancho del h2 sea del tamaño del texto */
+    text-align: center; /* Centra el texto si está en un contenedor más grande */
+    border-bottom: 4px solid #FFE10B; /* Línea que solo ocupa el texto */
+    margin-bottom: 20px; /* Espacio debajo del h2 */
+}
+
+
+        article {
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            flex-direction: row; /* Alineación horizontal predeterminada */
+            flex-wrap: wrap; 
+            gap: 20px; 
+            padding: 20px;
+            text-align: center;
+        }
+
+        article div {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 2px ; /* Espaciado opcional */
+        }
+
+        article section{
+            width: 300px;
+        }
+        
+
 
     </style>
 </head>
 <body>
     <header>
-        <a href="Inicio.html"><img src="img/logo.jpeg" alt="Logo"></a>
+        <a href="Inicio.html"><img src="img/Logos Rave On-01.png" alt="Logo"></a>
     </header>
+
+    
 
     <main>
 
         <h1>¡Bienvenidos a los eventos más espectaculares del mundo!</h1>
-        <h2>Vive las mejores fiestas, experiencias únicas y sorpresas increíbles. Descubre regalos exclusivos y recompensas que te encantarán.</h2>
+        <h2>Vive las mejores fiestas, experiencias únicas y sorpresas increíbles. Descubre regalos exclusivos y recompensas que te encantarán</h2>
 
 
         <section>
@@ -126,8 +157,46 @@
             <button type="button"> Ver más </button>
         </section>
 
-
     </main>
+
+    <article>
+        <div>
+            <h2>Line up de artistas</h2>
+        </div>
+        <section>
+            <img src="img/Logos Rave On-01.png" alt="Logo">
+            <h3>OZI</h3>
+            <a href=""><button type="button">Ver más</button></a>
+        </section>
+        <section>
+            <img src="img/Logos Rave On-01.png" alt="Logo">
+            <h3>NIGHTFLUXX</h3>
+            <a href=""><button type="button">Ver más</button></a>
+        </section>
+        <section>
+            <img src="img/Logos Rave On-01.png" alt="Logo">
+            <h3>KOMPI</h3>
+            <a href=""><button type="button">Ver más</button></a>
+        </section>
+        <section>
+            <img src="" alt="">
+            <h3>XHEIS</h3>
+            <a href=""><button type="button">Ver más</button></a>
+        </section>
+        <section>
+            <img src="" alt="">
+            <h3>BIG DICK BANDIDO</h3>
+            <a href=""><button type="button">Ver más</button></a>
+        </section>
+        <section>
+            <img src="" alt="">
+            <h3>KUKO</h3>
+            <a href=""><button type="button">Ver más</button></a>
+        </section>
+    </article>
+    
+
+    
 
     <footer>
         <p> © 2025 Rave On Inc. Todos los Derechos Reservados </p>
