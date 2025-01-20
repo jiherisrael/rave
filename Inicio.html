@@ -5,9 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
     <style>
-        body {
-            background-color: #0F0404;   
-        }
+  body {
+    background-color: #0F0404; 
+    position: relative; 
+}
+
+body::before {
+    content: ""; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/Logos\ Rave\ On-07.png); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 400px; 
+    opacity: 0.2; 
+    pointer-events: none; 
+    z-index: -1; 
+}
 
         p,span,h4,h3,h2,h1{
             color: #FFFFF0;
@@ -126,6 +143,7 @@
 
         article section{
             width: 300px;
+            border: none;
         }
         
 
@@ -179,17 +197,17 @@
             <a href=""><button type="button">Ver más</button></a>
         </section>
         <section>
-            <img src="" alt="">
+            <img src="img/Logos Rave On-01.png" alt="Logo">
             <h3>XHEIS</h3>
             <a href=""><button type="button">Ver más</button></a>
         </section>
         <section>
-            <img src="" alt="">
+            <img src="img/Logos Rave On-01.png" alt="Logo">
             <h3>BIG DICK BANDIDO</h3>
             <a href=""><button type="button">Ver más</button></a>
         </section>
         <section>
-            <img src="" alt="">
+            <img src="img/Logos Rave On-01.png" alt="Logo">
             <h3>KUKO</h3>
             <a href=""><button type="button">Ver más</button></a>
         </section>
