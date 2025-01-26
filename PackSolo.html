@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PackSolo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style> 
+    
+    body {
+        background-color: #0F0404; 
+        position: relative; 
+    }
+
+
+    p,span,h4,h3,h2,h1,li{
+        color: #FFFFF0;
+    }
+
+    header {
+          background:  #0F0404;
+          width: 100%;
+          display: flex;
+          flex-direction: column; /* Organiza los elementos en una columna */
+          justify-content: center;
+          align-items: center;
+          height: 200px; /* Ajusta el tamaño del header */
+        }
+
+        header img {
+          max-height: 100px; 
+          margin-bottom: 30px; 
+        }
+
+        header nav {
+          display: flex;
+          gap: 20px; 
+        }
+
+        header nav a {
+          color: #FFFFF0;
+          text-decoration: none;
+          font-size: 18px;
+          transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+          color: #FFE10B; 
+          border-bottom: 1px solid #FFE10B;
+        }
+
+        .activePage{
+          color: #FFE10B; 
+          border-bottom: 1px solid #FFE10B;
+        }
+
+
+    footer{
+            background: #0F0404 ;
+            width: 100%;
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            flex-direction: row; 
+            flex-wrap: wrap;
+            height: 100px; 
+            gap: 20px; 
+            padding: 1px;
+            text-align: center;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column; /* Asegura disposición vertical */
+            justify-content: flex-start; /* Ajusta alineación al inicio */
+            align-items: center; /* Centra los elementos horizontalmente */
+            gap: 20px; /* Espaciado consistente entre elementos */
+            padding: 20px;
+            text-align: center;
+    }
+
+            section {
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            flex-direction: column; 
+            flex-wrap: wrap; 
+            gap: 20px; 
+            padding: 30px; 
+            margin: 30px;
+            border: 7px solid #FFE10B;
+            border-radius: 30px;
+            width: 500px;  /* Mantener el ancho fijo */
+            
+            height: 100px;
+        }
+
+
+        button{
+            background-color: #FFE10B;
+            color: #0F0404;
+            height: 50px;
+            width: 200px;
+            border: 5px solid #c0a301;
+            border-radius: 40px;
+            font-weight: bolder;
+            font-size: large;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: #8a7502;
+            transition: background-color 0.4s ease, color 0.4s ease;
+        }
+
+        button:active{
+            background-color: #0F0404;
+            color: #FFFFF0;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        h1 {
+            margin-bottom: 20px; /* Espacio después del h1 */
+            border-bottom: 2px solid #FFE10B; /* Definir el borde con el estilo 'solid' */
+        }
+
+
+        h2,ul {
+            text-align: left; /* Alinea el texto a la izquierda */
+            align-self: flex-start; /* En un contenedor flex, alinea solo este elemento al inicio */
+            margin: 0; /* Ajusta márgenes si es necesario */
+        }
+
+        h2{
+            margin-top: 40px;
+        }
+
+        ul{
+            font-size: large;
+        }
+
+        
+
+        .contenedor {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row; /* Alineación horizontal predeterminada */
+            flex-wrap: wrap; /* Permite que los elementos se envuelvan si el espacio es limitado */
+            gap: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+    
+        @media (max-width: 900px) {
+            section {
+                width: 300px; 
+                min-width: 300px; 
+            }
+        }
+
+        section p {
+            font-size: large;
+        }
+
+        a{
+            color: #FFE10B;
+        }
+
+        #info{
+            margin-top: 60px;
+            text-align: center;
+        }
+
+    
+
+        section p[id] {
+            padding: 20px;
+            border-left: 2px solid #FFE10B;
+            border-right: 2px solid #FFE10B;
+        }
+
+ /*    #secondRelease, #thirdRelease {
+            display: none ;
+        } */
+
+        li{
+            margin-top: 10px
+        }
+
+
+section h2{
+    margin-top: 0px;
+    float: left;
+}
+
+
+
+@media (max-width: 900px) {
+        section {
+            flex-direction: row;
+            height: 375px;
+        }
+
+        section p[id] {
+        border: none;
+        border-top: 2px solid #FFE10B;
+        border-bottom: 2px solid #FFE10B;
+        width: 250px;
+        }
+    }
+
+        section button{
+            width: 150px;
+        }
+
+        footer div{
+          text-align: left;
+        }
+
+        footer ul{
+          list-style-type: none;
+          margin-top: 25px;
+          padding: 0; 
+          
+          text-align: left;
+        }
+
+        footer li{
+          margin: 10px 10px;
+          display: inline-block;
+          margin-bottom: 30px;
+        }
+
+        i {
+          margin-right: 10px;
+          font-size: 18px;
+          transition: transform 0.3s ease; /* Define la duración y el tipo de transición */
+        }
+
+        i:hover {
+          transform: scale(1.2); /* Aumenta el tamaño al 120% */
+        }
+
+        footer li a, footer li a:visited{
+          color: white;
+        }
+        footer li a:hover {
+          color: #FFE10B; 
+        }
+
+        .infoEvent{
+            color: #c0a301;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+
+        <a href="index.html">
+          <img src="img/Logos Rave On-01.png" alt="Logo">
+        </a>
+
+        <nav>
+          <a href="index.html" class="activePage">Home</a>
+          <a href="Line-up.html">Line up</a>
+          <a href="fyq.html">FYQ</a>
+          <a href="">Travel Info</a>
+        </nav>
+
+
+    </header>
+
+    <main>
+
+        <h1>Solo Pack</h1>
+    
+        <h2 class="infoEvent">Event Information:</h2>
+
+
+        <ul>
+            <li>The event will be held in a contemporary art gallery. The room has a capacity of 800 people. <br>It is equipped with lighting and sound systems, as well as a stage with a truss structure.</li>
+            <li>The venue has a total of 3 galleries.</li>
+            <li>The event starts at 9:00 PM and ends at 3:30 AM. Doors open at 8:30 PM.</li>
+            <li>Venue Name: <a href="https://www.dogyard.no/">Dogyard</a></li>
+            <li>Address: <a href="https://g.co/kgs/EvnRccj">Økernveien 145, 0580 Oslo</a></li>
+            <li>Capacity: 800 People</li>
+        </ul>
+
+        
+    
+        <h2 id="info">By purchasing a ticket for this event,<br><br> you consent to the use of your personal data for event management and agree that photos and videos taken during the event may be used on our social media and for promotional purposes. <br><br>If you do not wish to appear in photos or videos, please let us know before or during the event.</h2>
+    
+        <div class="contenedor">
+    
+            <section id="firstRelease">
+                <h2>Family <br>Raver</h2>
+                <div>
+                    <p id="contador1"></p>
+                </div>
+                
+                <div>
+                    <p>15€</p>
+                <a href="https://buy.stripe.com/test_cN29BBgrQ7RaalyfYY"><button type="button">BUY</button></a>
+                </div>
+            </section>
+    
+            <section id="secondRelease">
+                <h2>Loyal <br>Raver</h2>
+                <div>
+                    <p id="contador2"></p>
+                </div>
+                
+                <div>
+                    <p>20€</p>
+                <a href="https://buy.stripe.com/test_cN29BBgrQ7RaalyfYY"><button type="button">BUY</button></a>
+                </div>
+            </section>
+    
+            <section id="thirdRelease">
+                <h2>Loyal <br>Raver</h2>
+                <div>
+                    <p id="contador3"></p>
+                </div>
+                
+                <div>
+                    <p>25€</p>
+                <a href="https://buy.stripe.com/test_cN29BBgrQ7RaalyfYY"><button type="button">BUY</button></a>
+                </div>
+            </section>
+
+            <section id="fourthRelease">
+                <h2>Latetly <br>Raver</h2>
+                <div>
+                    <p id="contador4"></p>
+                </div>
+                
+                <div>
+                    <p>30€</p>
+                <a href="https://buy.stripe.com/test_cN29BBgrQ7RaalyfYY"><button type="button">BUY</button></a>
+                </div>
+            </section>
+    
+        </div>
+    
+    </main>
+    
+
+    <footer>
+        <p> © 2025 Rave On Inc. Todos los Derechos Reservados </p>
+
+        <div>
+          <ul>
+            <li >
+              <a href="tel:+4796870566" aria-label="Call us">
+                <i class="fa-solid fa-phone"></i>
+              </a>
+            </li>
+            <li >
+              <a href="mailto:RAVEONWORLD@GMAIL.COM" aria-label="Send us an email">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+            </li>
+            <li >
+              <a href="https://www.instagram.com/raveon_world/" target="_blank" rel="noopener noreferrer" aria-label="Visit us on Instagram">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </li>
+            <li >
+              <a href="https://www.tiktok.com/@raveon_world" target="_blank" rel="noopener noreferrer" aria-label="Visit us on Instagram">
+                <i class="fa-brands fa-tiktok"></i>
+              </a>
+            </li>
+              <li class="facebook"><i class="fa-brands fa-facebook"></i></li>
+          </ul>
+      </div>
+
+    </footer>
+
+
+    <script>
+        const deadline = new Date("2025-03-22T23:59:59").getTime(); // Fecha límite
+
+       
+        const countdown = setInterval(() => {
+            const now = new Date().getTime(); 
+            const timeLeft = deadline - now; // Diferencia en milisegundos
+
+            if (timeLeft >= 0) {
+                
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                // Mostrar el contador
+                document.getElementById("contador1").innerHTML = 
+                    `Expire in: ${days} days,<br>${hours} hours,<br>${minutes} minutes,<br>${seconds} seconds.`;
+            } else {
+                // Cuando el tiempo se acabe
+                clearInterval(countdown);
+                document.getElementById("contador1").classList.add("expired");
+                document.getElementById("contador1").innerHTML = "¡La venta de entradas ha terminado!";
+            }
+        }, 1000);
+
+
+    </script>
+    
+</body>
+</html>

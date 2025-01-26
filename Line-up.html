@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+          background-color: #0F0404; 
+          position: relative; 
+        }
+
+        p,span,h4,h3,h2,h1,li{
+            color: #FFFFF0;
+        }
+
+        header {
+          background:  #0F0404 ;
+          width: 100%;
+          display: flex;
+          flex-direction: column; /* Organiza los elementos en una columna */
+          justify-content: center;
+          align-items: center;
+          height: 200px; /* Ajusta el tamaño del header */
+        }
+
+        header img {
+          max-height: 100px; 
+          margin-bottom: 30px; 
+        }
+
+        header nav {
+          display: flex;
+          gap: 20px; 
+        }
+
+        header nav a {
+          color: #FFFFF0;
+          text-decoration: none;
+          font-size: 18px;
+          transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+          color: #FFE10B; 
+          border-bottom: 1px solid #FFE10B;
+        }
+
+        .activePage{
+          color: #FFE10B; 
+          border-bottom: 1px solid #FFE10B;
+        }
+
+
+        img {
+          width: 150px; 
+          height: auto;
+        }
+
+        footer{
+            background:  #0F0404 ;
+            width: 100%;
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            flex-direction: row; 
+            flex-wrap: wrap;
+            height: 100px; 
+            gap: 20px; 
+            padding: 1px;
+            text-align: center;
+        }
+
+        
+        section {
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            flex-direction: column; 
+            flex-wrap: wrap; 
+            gap: 20px; 
+            padding: 30px; 
+            margin: 30px;
+            border: 7px solid #FFE10B;
+            border-radius: 30px;
+            width: 400px; 
+        }
+
+
+        button{
+            background-color: #FFE10B;
+            color: #0F0404;
+            height: 50px;
+            width: 200px;
+            border: 5px solid #c0a301;
+            border-radius: 40px;
+            font-weight: bolder;
+            font-size: large;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: #8a7502;
+            transition: background-color 0.4s ease, color 0.4s ease;
+        }
+
+        button:active{
+            background-color: #0F0404;
+            color: #FFFFF0;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+      
+
+        section h1{
+            font-size: xx-large;
+
+        }
+
+        article h1 {
+    display: inline-block; /* Hace que el ancho del h2 sea del tamaño del texto */
+    text-align: center; /* Centra el texto si está en un contenedor más grande */
+    border-bottom: 5px solid #FFE10B;
+    margin-bottom: 20px; /* Espacio debajo del h2 */
+}
+
+
+        article {
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            flex-direction: row; /* Alineación horizontal predeterminada */
+            flex-wrap: wrap; 
+            gap: 20px; 
+            padding: 20px;
+            text-align: center;
+        }
+
+        article div {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        article section{
+            width: 300px;
+            border: none;
+        }
+
+
+        footer div{
+          text-align: left;
+        }
+
+        footer ul{
+          list-style-type: none;
+          margin-top: 25px;
+          padding: 0; 
+          
+          text-align: left;
+        }
+
+        footer li{
+          margin: 10px 10px;
+          display: inline-block;
+          margin-bottom: 30px;
+        }
+
+        i {
+          margin-right: 10px;
+          font-size: 18px;
+          transition: transform 0.3s ease; /* Define la duración y el tipo de transición */
+        }
+
+        i:hover {
+          transform: scale(1.2); /* Aumenta el tamaño al 120% */
+        }
+
+        footer li a, footer li a:visited{
+          color: white;
+        }
+        footer li a:hover {
+          color: #FFE10B; 
+        }
+        .timetable-container {
+            text-align: center;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            width: 90%;
+            max-width: 600px;
+            margin: 0 auto;
+        }     
+
+        .timetable-container h1{
+          margin-bottom: 80px;
+        }
+
+
+
+        .timetable {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .timetable li {
+            display: flex;
+            justify-content: space-between;
+            background: #FFE10B;
+            padding: 10px 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .timetable li:hover {
+            background: #c0a301;
+            transform: scale(1.05);
+            transition: all 0.2s ease-in-out;
+        }
+
+        .time,.artist {
+            font-weight: bold;
+            color: #0F0404;
+        }
+
+       
+
+    </style>
+</head>
+<body>
+    <header>
+
+        <a href="index.html">
+          <img src="img/Logos Rave On-01.png" alt="Logo">
+        </a>
+
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="Line-up.html"class="activePage">Line up</a>
+          <a href="fyq.html">FYQ</a>
+          <a href="">Travel Info</a>
+        </nav>
+
+
+    </header>
+
+    <article>
+        <div>
+            <h1>Artist line-up</h1>
+        </div>
+        <section>
+            <img src="img/ValerieSantos.jpg" alt="Logo">
+            <h3>VALERIE SANTOS</h3>
+            <a href=""><button type="button">Socials</button></a>
+        </section>
+        <section>
+            <img src="img/GastonZani.jpg" alt="Logo">
+            <h3>GASTON ZANI</h3>
+            <a href=""><button type="button">Socials</button></a>
+        </section>
+        <section>
+            <img src="img/Logos Rave On-01.png" alt="Logo">
+            <h3>STUDIOSTINE</h3>
+            <a href=""><button type="button">Socials</button></a>
+        </section>
+        <section>
+            <img src="img/Logos Rave On-01.png" alt="Logo">
+            <h3>XHEIS</h3>
+            <a href=""><button type="button">Socials</button></a>
+        </section>
+        <section>
+            <img src="img/Logos Rave On-01.png" alt="Logo">
+            <h3>OZI</h3>
+            <a href=""><button type="button">Socials</button></a>
+        </section>
+        <section>
+            <img src="img/Logos Rave On-01.png" alt="Logo">
+            <h3>NIGHTFLUXX</h3>
+            <a href=""><button type="button">Socials</button></a>
+        </section>
+    </article>
+
+    <article>
+        <div class="timetable-container">
+          <h1>Event Timetable</h1>
+          <ul class="timetable">
+              <li>
+                  <span class="time">21:00 - 22:00</span>
+                  <span class="artist">STUDIOSTINE</span>
+              </li>
+              <li>
+                  <span class="time">22:00 - 23:00</span>
+                  <span class="artist">OZI</span>
+              </li>
+              <li>
+                  <span class="time">23:00 - 00:00</span>
+                  <span class="artist">XHEIS</span>
+              </li>
+              <li>
+                  <span class="time">00:00 - 01:30</span>
+                  <span class="artist">VALERIE SANTOS</span>
+              </li>
+              <li>
+                  <span class="time">01:30 - 03:00</span>
+                  <span class="artist">GASTON ZANI</span>
+              </li>
+              <li>
+                  <span class="time">03:00 - 03:30</span>
+                  <span class="artist">NIGHTFLUXX</span>
+              </li>
+          </ul>
+      </div>
+    </article>
+
+
+    <footer>
+        <p> © 2025 Rave On Inc. Todos los Derechos Reservados </p>
+
+        <div>
+          <ul>
+            <li >
+              <a href="tel:+4796870566" aria-label="Call us">
+                <i class="fa-solid fa-phone"></i>
+              </a>
+            </li>
+            <li >
+              <a href="mailto:RAVEONWORLD@GMAIL.COM" aria-label="Send us an email">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+            </li>
+            <li >
+              <a href="https://www.instagram.com/raveon_world/" target="_blank" rel="noopener noreferrer" aria-label="Visit us on Instagram">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </li>
+            <li >
+              <a href="https://www.tiktok.com/@raveon_world" target="_blank" rel="noopener noreferrer" aria-label="Visit us on Instagram">
+                <i class="fa-brands fa-tiktok"></i>
+              </a>
+            </li>
+              <li class="facebook"><i class="fa-brands fa-facebook"></i></li>
+          </ul>
+      </div>
+
+    </footer>
+
+</body>
+</html>

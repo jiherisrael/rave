@@ -3,54 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title>Homepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
-  body {
-    background-color: #0F0404; 
-    position: relative; 
-}
+        body {
+          background-color: #0F0404; 
+          position: relative; 
+        }
 
-body::before {
-    content: ""; 
-    position: absolute; 
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(img/Logos\ Rave\ On-07.png); 
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 400px; 
-    opacity: 0.2; 
-    pointer-events: none; 
-    z-index: -1; 
-}
+        body::before {
+            content: ""; 
+            position: absolute; 
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(img/Logos\ Rave\ On-07.png); 
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 400px; 
+            opacity: 0.1; 
+            pointer-events: none; 
+            z-index: -1; 
+            margin-top: 40px;
+        }
 
-        p,span,h4,h3,h2,h1{
+        p,span,h4,h3,h2,h1,li{
             color: #FFFFF0;
         }
 
-        header{
-            background: linear-gradient(to bottom, #0F0404 90%, #FFE10B);
-            width: 100%;
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            height: 200px; 
+        header {
+          background:  #0F0404;
+          width: 100%;
+          display: flex;
+          flex-direction: column; /* Organiza los elementos en una columna */
+          justify-content: center;
+          align-items: center;
+          height: 200px; /* Ajusta el tamaño del header */
         }
 
-         img {
-            width: 150px; 
-            height: auto;
+        header img {
+          max-height: 100px; 
+          margin-bottom: 30px; 
+        }
+
+        header nav {
+          display: flex;
+          gap: 20px; 
+        }
+
+        header nav a {
+          color: #FFFFF0;
+          text-decoration: none;
+          font-size: 18px;
+          transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+          color: #FFE10B; 
+          border-bottom: 1px solid #FFE10B;
+        }
+
+        .activePage{
+          color: #FFE10B; 
+          border-bottom: 1px solid #FFE10B;
+        }
+
+
+        img {
+          width: 150px; 
+          height: auto;
         }
 
         footer{
-            background: linear-gradient(to top, #0F0404 90%, #FFE10B);
+            background: #0F0404 ;
             width: 100%;
             display: flex; 
             justify-content: center; 
             align-items: center; 
+            flex-direction: row; 
+            flex-wrap: wrap;
             height: 100px; 
+            gap: 20px; 
+            padding: 1px;
+            text-align: center;
         }
 
         main {
@@ -59,9 +96,14 @@ body::before {
             align-items: center; 
             flex-direction: row; /* Alineación horizontal predeterminada */
             flex-wrap: wrap; 
-            gap: 20px; 
-            padding: 20px;
             text-align: center;
+            height: 490px;
+        }
+
+        @media (max-width: 900px) {
+          main{
+            height: 530px
+          }
         }
 
         section {
@@ -76,6 +118,8 @@ body::before {
             border: 7px solid #FFE10B;
             border-radius: 30px;
             width: 400px; 
+            margin-right: 200px;
+            margin-left: 200px;
         }
 
 
@@ -103,121 +147,115 @@ body::before {
         }
 
         h1 {
-            margin-bottom: 20px;  
+            margin-top: 50px; 
+            text-align: center; 
         }
 
-        .precio{
-            margin-top: -15px;
-            font-size: x-large;
-        }
-
-        section h2{
-            font-size: xx-large;
-
-        }
-
-        article h2 {
-    display: inline-block; /* Hace que el ancho del h2 sea del tamaño del texto */
-    text-align: center; /* Centra el texto si está en un contenedor más grande */
-    border-bottom: 4px solid #FFE10B; /* Línea que solo ocupa el texto */
-    margin-bottom: 20px; /* Espacio debajo del h2 */
-}
-
-
-        article {
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            flex-direction: row; /* Alineación horizontal predeterminada */
-            flex-wrap: wrap; 
-            gap: 20px; 
-            padding: 20px;
-            text-align: center;
-        }
-
-        article div {
-            width: 100%;
-            text-align: center;
-            margin-bottom: 2px ; /* Espaciado opcional */
-        }
-
-        article section{
-            width: 300px;
-            border: none;
-        }
         
+        footer div{
+          text-align: left;
+        }
 
+        footer ul{
+          list-style-type: none;
+          margin-top: 25px;
+          padding: 0; 
+          
+          text-align: left;
+        }
+
+        footer li{
+          margin: 10px 10px;
+          display: inline-block;
+          margin-bottom: 30px;
+        }
+
+        i {
+          margin-right: 10px;
+          font-size: 18px;
+          transition: transform 0.3s ease; /* Define la duración y el tipo de transición */
+        }
+
+        i:hover {
+          transform: scale(1.2); /* Aumenta el tamaño al 120% */
+        }
+
+        footer li a, footer li a:visited{
+          color: white;
+        }
+        footer li a:hover {
+          color: #FFE10B; 
+        }
 
     </style>
 </head>
 <body>
     <header>
-        <a href="Inicio.html"><img src="img/Logos Rave On-01.png" alt="Logo"></a>
+
+        <a href="index.html">
+          <img src="img/Logos Rave On-01.png" alt="Logo">
+        </a>
+
+        <nav>
+          <a href="index.html" class="activePage">Home</a>
+          <a href="Line-up.html">Line up</a>
+          <a href="fyq.html">FYQ</a>
+          <a href="">Travel Info</a>
+        </nav>
+
+
     </header>
 
     
-
+    <h1>Welcome to the most spectacular events in the world!</h1>
     <main>
-
-        <h1>¡Bienvenidos a los eventos más espectaculares del mundo!</h1>
-        <h2>Vive las mejores fiestas, experiencias únicas y sorpresas increíbles. Descubre regalos exclusivos y recompensas que te encantarán</h2>
-
 
         <section>
             <h2> Pack solo</h2>
-            <p class="precio">Desde 25€</p>
-            <a href="EntradasBaratas.html"><button type="button"> Ver más </button></a>
+            <a href="PackSolo.html"><button type="button"> See more </button></a>
         </section>
 
         <section>
             <h2> Pack duo</h2>
-            <p class="precio">Desde 60€</p>
-            <button type="button"> Ver más </button>
+            <a href="PackDuo.html"><button type="button"> See more </button></a>
         </section>
 
     </main>
 
-    <article>
-        <div>
-            <h2>Line up de artistas</h2>
-        </div>
-        <section>
-            <img src="img/Logos Rave On-01.png" alt="Logo">
-            <h3>OZI</h3>
-            <a href=""><button type="button">Ver más</button></a>
-        </section>
-        <section>
-            <img src="img/Logos Rave On-01.png" alt="Logo">
-            <h3>NIGHTFLUXX</h3>
-            <a href=""><button type="button">Ver más</button></a>
-        </section>
-        <section>
-            <img src="img/Logos Rave On-01.png" alt="Logo">
-            <h3>KOMPI</h3>
-            <a href=""><button type="button">Ver más</button></a>
-        </section>
-        <section>
-            <img src="img/Logos Rave On-01.png" alt="Logo">
-            <h3>XHEIS</h3>
-            <a href=""><button type="button">Ver más</button></a>
-        </section>
-        <section>
-            <img src="img/Logos Rave On-01.png" alt="Logo">
-            <h3>BIG DICK BANDIDO</h3>
-            <a href=""><button type="button">Ver más</button></a>
-        </section>
-        <section>
-            <img src="img/Logos Rave On-01.png" alt="Logo">
-            <h3>KUKO</h3>
-            <a href=""><button type="button">Ver más</button></a>
-        </section>
-    </article>
-    
 
     
 
     <footer>
         <p> © 2025 Rave On Inc. Todos los Derechos Reservados </p>
+
+        <div>
+          <ul>
+            <li >
+              <a href="tel:+4796870566" aria-label="Call us">
+                <i class="fa-solid fa-phone"></i>
+              </a>
+            </li>
+            <li >
+              <a href="mailto:RAVEONWORLD@GMAIL.COM" aria-label="Send us an email">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+            </li>
+            <li >
+              <a href="https://www.instagram.com/raveon_world/" target="_blank" rel="noopener noreferrer" aria-label="Visit us on Instagram">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </li>
+            <li >
+              <a href="https://www.tiktok.com/@raveon_world" target="_blank" rel="noopener noreferrer" aria-label="Visit us on Instagram">
+                <i class="fa-brands fa-tiktok"></i>
+              </a>
+            </li>
+              <li class="facebook"><i class="fa-brands fa-facebook"></i></li>
+          </ul>
+      </div>
+
     </footer>
+
+    
 </body>
 </html>

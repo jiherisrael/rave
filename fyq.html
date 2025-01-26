@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+          background-color: #0F0404; 
+          position: relative; 
+        }
+
+
+        p,span,h4,h3,h2,h1,li{
+            color: #FFFFF0;
+        }
+
+        header {
+          background: #0F0404 90%;
+          width: 100%;
+          display: flex;
+          flex-direction: column; /* Organiza los elementos en una columna */
+          justify-content: center;
+          align-items: center;
+          height: 200px; /* Ajusta el tamaño del header */
+        }
+
+        header img {
+          max-height: 100px; 
+          margin-bottom: 30px; 
+        }
+
+        header nav {
+          display: flex;
+          gap: 20px; 
+        }
+
+        header nav a {
+          color: #FFFFF0;
+          text-decoration: none;
+          font-size: 18px;
+          transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+          color: #FFE10B; 
+          border-bottom: 1px solid #FFE10B;
+        }
+
+        .activePage{
+          color: #FFE10B; 
+          border-bottom: 1px solid #FFE10B;
+        }
+
+
+        img {
+          width: 150px; 
+          height: auto;
+        }
+
+        footer{
+            background:  #0F0404 ;
+            width: 100%;
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            flex-direction: row; 
+            flex-wrap: wrap;
+            height: 100px; 
+            gap: 20px; 
+            padding: 1px;
+            text-align: center;
+        }
+
+        section {
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            flex-direction: column; 
+            flex-wrap: wrap; 
+            gap: 20px; 
+            padding: 30px; 
+            margin: 30px;
+            border: 7px solid #FFE10B;
+            border-radius: 30px;
+            width: 400px; 
+        }
+
+
+        button{
+            background-color: #FFE10B;
+            color: #0F0404;
+            height: 50px;
+            width: 200px;
+            border: 5px solid #c0a301;
+            font-weight: bolder;
+            font-size: large;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: #8a7502;
+            transition: background-color 0.4s ease, color 0.4s ease;
+        }
+
+        button:active{
+            background-color: #0F0404;
+            color: #FFFFF0;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        h1 {
+            margin-top: 50px; 
+            text-align: center; 
+            font-size: xx-large;
+            border-bottom: 5px solid #FFE10B;
+        }
+  
+
+        article h1 {
+            display: inline-block; /* Hace que el ancho del h2 sea del tamaño del texto */
+            margin-top: 50px; 
+            text-align: center; 
+            font-size: xx-large;
+            border-bottom: 5px solid #FFE10B;
+        }
+
+
+        article {
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            flex-direction: row; /* Alineación horizontal predeterminada */
+            flex-wrap: wrap; 
+            gap: 20px; 
+            padding: 20px;
+            text-align: center;
+        }
+
+        article div {
+          width: 100%;
+          text-align: center;
+          margin-bottom: 40px;
+          text-transform: uppercase;
+        }
+
+        .accordion {
+          display: grid; 
+          grid-template-columns: repeat(3, 1fr); 
+          max-width: 100%; 
+          margin-bottom: 50px;
+        }
+
+        .accordion-item {
+          padding: 15px;
+          background-color: #0F0404;
+          text-transform: uppercase;
+          border-radius: 5px; 
+        }
+
+        @media (max-width: 900px) {
+          .accordion {
+            grid-template-columns: repeat(2, 1fr); 
+          }
+        }
+
+        @media (max-width: 600px) {
+          .accordion {
+            grid-template-columns: 1fr; 
+          }
+        }
+
+
+        
+
+        .accordion-header {
+          background-color: #0F0404;
+          border: none;
+          cursor: pointer;
+          padding: 15px;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          text-align: left;
+          font-size: 16px;
+          font-weight: bold;
+          border: 1px solid #FFE10B; 
+          text-transform: uppercase;
+          margin: 10px;
+        }
+
+        .accordion-header:hover {
+          background-color: #362d2d;
+        }
+
+        .accordion-icon {
+          font-size: 20px;
+          transition: transform 0.3s ease;
+          color: #FFE10B;
+        }
+
+        .accordion-content {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.3s ease-out;
+          padding: 0 15px;
+        }
+
+        .accordion-content p {
+          margin: 15px 30px;
+          
+        }
+
+        .accordion-item.active .accordion-content {
+          max-height: 175px; /* Ajusta según el contenido */
+          /*overflow-y: auto;*/
+          
+        }
+
+        footer div{
+          text-align: left;
+        }
+
+        footer ul{
+          list-style-type: none;
+          margin-top: 25px;
+          padding: 0; 
+          
+          text-align: left;
+        }
+
+        footer li{
+          margin: 10px 10px;
+          display: inline-block;
+          margin-bottom: 30px;
+        }
+
+        i {
+          margin-right: 10px;
+          font-size: 18px;
+          transition: transform 0.3s ease; /* Define la duración y el tipo de transición */
+        }
+
+        i:hover {
+          transform: scale(1.2); /* Aumenta el tamaño al 120% */
+        }
+
+        footer li a, footer li a:visited{
+          color: white;
+        }
+        footer li a:hover {
+          color: #FFE10B; 
+        }
+      
+
+    </style>
+</head>
+<body>
+    <header>
+
+        <a href="index.html">
+          <img src="img/Logos Rave On-01.png" alt="Logo">
+        </a>
+
+        <nav>
+          <a href="index.html" >Home</a>
+          <a href="Line-up.html">Line up</a>
+          <a href="fyq.html" class="activePage">FYQ</a>
+          <a href="">Travel Info</a>
+        </nav>
+
+
+    </header>
+
+    <article>
+      <div>
+        <h1>FYQ</h1>
+      </div>
+    </article>
+
+    <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>CAN YOU LEAVE AND RE-ENTER?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Yes, you can step outside to smoke and re-enter by showing your wristband.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>WILL THERE BE A CLOAKROOM?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>Yes, we have a cloakroom available, and we recommend leaving your belongings there. Neither the promoter, security, nor the venue is responsible for any lost items.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>WHAT ABOUT THE SOUND?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>L-ACOUSTIC</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>WILL THE VENUE BE VENTILATED?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>Yes, the venue will have ventilation all night so you can dance comfortably!</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>WHAT ITEMS ARE NOT ALLOWED?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>You cannot enter the venue with alcoholic beverages, drugs, weapons, or any items prohibited by the venue's rules.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>WHEN DO THE DOORS OPEN?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>The doors open at 8:30 PM, so you can come in early and grab the best spot!</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>I HAVEN’T RECEIVED MY TICKET, WHAT SHOULD I DO?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>If your ticket hasn’t arrived in your email, don’t worry! Send us a DM, and we’ll guide you on how to get your ticket.</p>
+          </div>
+        </div>
+    </div>
+      
+      
+    
+
+    
+
+    <footer>
+        <p> © 2025 Rave On Inc. Todos los Derechos Reservados </p>
+
+        <div>
+          <ul>
+            <li >
+              <a href="tel:+4796870566" aria-label="Call us">
+                <i class="fa-solid fa-phone"></i>
+              </a>
+            </li>
+            <li >
+              <a href="mailto:RAVEONWORLD@GMAIL.COM" aria-label="Send us an email">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+            </li>
+            <li >
+              <a href="https://www.instagram.com/raveon_world/" target="_blank" rel="noopener noreferrer" aria-label="Visit us on Instagram">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </li>
+            <li >
+              <a href="https://www.tiktok.com/@raveon_world" target="_blank" rel="noopener noreferrer" aria-label="Visit us on Instagram">
+                <i class="fa-brands fa-tiktok"></i>
+              </a>
+            </li>
+              <li class="facebook"><i class="fa-brands fa-facebook"></i></li>
+          </ul>
+      </div>
+
+    </footer>
+
+    <script>
+        document.querySelectorAll('.accordion-header').forEach((header) => {
+      header.addEventListener('click', () => {
+        const accordionItem = header.parentElement;
+        const isActive = accordionItem.classList.contains('active');
+    
+        // Cerrar todos los items abiertos
+        document.querySelectorAll('.accordion-item').forEach((item) => {
+          item.classList.remove('active');
+          const icon = item.querySelector('.accordion-icon');
+          if (icon) icon.textContent = '+'; // Cambiar a "+"
+        });
+    
+        // Abrir o cerrar el item clickeado
+        if (!isActive) {
+          accordionItem.classList.add('active');
+          const icon = accordionItem.querySelector('.accordion-icon');
+          if (icon) icon.textContent = '-'; // Cambiar a "-"
+        }
+      });
+    });
+    
+          </script>
+    
+</body>
+</html>
