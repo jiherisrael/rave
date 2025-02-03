@@ -12,23 +12,6 @@
           position: relative; 
         }
 
-        body::before {
-            content: ""; 
-            position: absolute; 
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url(img/Logos\ Rave\ On-07.png); 
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 400px; 
-            opacity: 0.1; 
-            pointer-events: none; 
-            z-index: -1; 
-            margin-top: 40px;
-        }
-
         p,span,h4,h3,h2,h1,li{
             color: #FFFFF0;
         }
@@ -91,15 +74,28 @@
         }
 
         main {
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            flex-direction: row; /* Alineación horizontal predeterminada */
-            flex-wrap: wrap; 
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 columnas por defecto */
+            gap: 20px; /* Espaciado entre elementos */
             text-align: center;
-            height: 360px;
+            height: auto;
+            justify-content: center;
         }
 
+
+        /* Cuando la pantalla sea menor a 900px, sigue en 2 columnas */
+        @media (max-width: 900px) {
+            main {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Cuando la pantalla sea menor a 600px, pasa a 1 columna */
+        @media (max-width: 600px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
         
         section {
             display: flex; 
@@ -107,13 +103,24 @@
             align-items: center; 
             flex-direction: column; 
             flex-wrap: wrap; 
-            gap: 20px; 
-            padding: 30px; 
-            margin: 30px;
-            border-radius: 30px;
-            width: 400px; 
-            margin-right: 200px;
-            margin-left: 200px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        section ul{
+            text-align: left;
+            list-style-type: none;
+        }
+
+        section li{
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        section ul li::before{
+            content: "-";
+            font-weight: bold; 
+            margin-right: 5px; 
         }
 
 
@@ -142,34 +149,35 @@
         }
 
         h1 {
-            margin-top: 50px; 
-            margin-left: 50px;
+            margin-top: 50px;
             text-transform: uppercase;
-            font-size: 50px;
+            border-bottom: 5px solid #FFE10B;
+            text-align: center;
+            width: max-content; /* Ajusta el ancho al contenido del h1*/
+            margin-left: auto;
+            margin-right: auto; 
         }
+
 
         h2{
-          margin-top: 30px; 
-          margin-left: 50px;
+          
           text-transform: uppercase;
-          font-size: 30px;
+          border-bottom: 3px solid #FFFFF0;
         }
 
-        @media (max-width: 900px) {
+        /* @media (max-width: 900px) {
           main{
             height: 200px;
           }
 
-          body::before{
-            background-image: none;
-          }
+          
 
           h1,h2{
             text-align: center;
             margin-left: 0px;
           }
           
-        }
+        } */
 
         footer div{
           text-align: left;
@@ -205,6 +213,7 @@
         footer li a:hover {
           color: #FFE10B; 
         }
+        
 
     </style>
 </head>
@@ -216,31 +225,74 @@
         </a>
 
         <nav>
-          <a href="index.html" class="activePage">Home</a>
+          <a href="index.html" >Home</a>
           <a href="Line-up.html">Line up</a>
           <a href="fyq.html">FYQ</a>
           <a href="TravelInfo.html">Travel Info</a>
-          <a href="Rules.html">Rules</a>
+          <a href="Rules.html" class="activePage">Rules</a>
         </nav>
 
 
     </header>
 
     
-    <h1>Rave on - Gallery</h1>
-    <h2>Saturday 22 march 2025 <br>
-      from 21:00 to 03:30</h2>
+    <h1>Rules</h1>
+    
+    
     <main>
 
         <section>
-            
-            <a href="PackSolo.html"><button type="button"> Tickets </button></a>
+            <h2>Access</h2>
+            <ul>
+                <li>
+                Entrance is required to enjoy the party! <br><br>
+                Don't forget to bring your wristband, it will allow you to go in and out whenever you need.
+                </li>
+            </ul>
         </section>
+        
+        <section>
+            <h2>Not allowed</h2>
+            <ul>
+                <li>
+                    Bringing outside drinks, drugs, weapons, or any dangerous objects.
+                </li>
+                <li>
+                    Disrespecting other attendees, the staff, or the venue. This is a place to enjoy!
+                </li>
+                <li>
+                    NO FLASH!
+                </li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Sound & Security</h2>
+            <ul>
+                <li>
+                    The volume will be within the allowed limits (don’t worry, it will be enough to make you feel the vibe).
+                </li>
+                <li>
+                    Always follow the instructions from the security team.
+                </li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Space Care</h2>
+            <ul>
+                <li>
+                    Respect the venue. We are in a unique space, value it and enjoy the experience!
+                </li>
+                <li>
+                    Don’t damage the furniture, facilities, or equipment. Let's make this night unforgettable!
+                </li>
+            </ul>
+        </section>
+        
 
-        <!-- <section>
-            
-            <a href="PackDuo.html"><button type="button"> Tickets </button></a>
-        </section> -->
+
+        
 
     </main>
 
