@@ -217,7 +217,7 @@
 
         <nav>
           <a href="index.html" class="activePage">Home</a>
-          <a href="Line-up.html">Line up</a>
+          <a href="Line-up.html" id="lineUp">Line up <span id="tooltip" style="display: none; color: red; font-size: 12px; margin-left: 10px;">COMING SOON</span></a>
           <a href="fyq.html">FYQ</a>
           <a href="TravelInfo.html">Travel Info</a>
           <a href="Rules.html">Rules</a>
@@ -282,6 +282,19 @@
 
     </footer>
 
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+            const enlace = document.getElementById("lineUp");
+            const fechaActual = new Date();
+            const fechaLimite = new Date(fechaActual.getFullYear(), 2, 3); // 3 de marzo (mes 2 porque en JS enero = 0)
+
+            if (fechaActual < fechaLimite) {
+                enlace.removeAttribute("href"); // Elimina el atributo href para deshabilitar el enlace
+                enlace.style.pointerEvents = "none"; // Evita interacción
+                enlace.style.color = "red"; // Cambia color para indicar que está deshabilitado            
+            }
+        });
+    </script>
     
 </body>
 </html>
